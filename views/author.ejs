@@ -1,1 +1,238 @@
-<div>HELLO WORLD YOU ARE IN AUTHORS</div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta htp-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"/>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js" defer></script>
+    <title>Portfolio</title>
+</head>
+
+<body>
+   <div class="frame">
+    <div class="main_frame">
+        <div class="left_frame">
+            <div class="left_1">
+                <div class="left_1_1">
+                    <img src="images/profile.png" 
+                    width="156px" 
+                    height="142px"
+                    alt="">
+                </div>
+                <div class="left_1_2"><%=user.name%></div>
+                <div class="left_1_3"><%=user.profession%></div>
+                <div class="left_icons">
+                    <a class="link_href" href="">
+                        <div class="icon">
+                            <img src="icon/Instagram.svg">
+                        </div>
+                    </a>
+                    <a class="link_href" href="">
+                        <div class="icon">
+                            <img src="icon/Twitter.svg">
+                        </div>
+                    </a>
+                    <a class="link_href" href="">
+                        <div class="icon">
+                            <img src="icon/Youtube.svg">
+                        </div>
+                    </a>
+                    <a class="link_href" href="">
+                        <div class="icon">
+                            <img src="icon/Linkeding.svg">
+                        </div>
+                    </a>
+                    <a class="link_href" href="">
+                        <div class="icon">
+                            <img src="icon/Dribbble.svg">
+                        </div>
+                    </a>
+                    <a class="link_href" href="">
+                        <div class="icon">
+                            <img src="icon/Facebook.svg">
+                        </div>
+                    </a>
+                
+                </div>
+                
+            </div>
+            <div class="marginer"></div>
+            <div class="left_2">
+                <div class="left_2_1_box">
+                    <span>Age</span>
+                    <a><%=user.age%></a>
+                </div>
+                <div class="left_2_1_box">
+                    <span>residence</span>
+                    <a><%=user.residence%></a>
+                </div>
+                <div class="left_2_1_box">
+                    <span>Freelance</span>
+                    <a>unavailabe</a>
+                </div>
+                <div class="left_2_1_box">
+                    <span>Address</span>
+                    <a><%=user.address%></a>
+                </div>
+            </div>
+            <div class="marginer"></div>
+            <div class="left_3">
+                <div class="left_3_1_box">
+                    <strong>Languages</strong>
+                    <span></span>
+                </div>
+                <div class="left_3_2_box">
+                    <span><%=user.language[0]%></span>
+                    <span>100%</span>
+                </div>
+                <div class="left_3_2_box">
+                    <span><%=user.language[1]%></span>
+                    <span>80%</span>
+                </div>
+                <div class="left_3_2_box">
+                    <span><%=user.language[2]%></span>
+                    <span>60%</span>
+                </div>
+            </div>
+            <div class="marginer"></div>
+            <div class="left_4">
+                <div class="left_4_1_box">
+                    <strong>Skills</strong>
+                    <span></span>
+                </div>
+                <div class="left_4_1_box">
+                    <span><%=user.skills[0]%></span>
+                    <span>90%</span>
+                </div>
+                <div class="left_4_1_box">
+                    <span><%=user.skills[1]%></span>
+                    <span>85%</span>
+                </div>
+                <div class="left_4_1_box">
+                    <span><%=user.skills[2]%></span>
+                    <span>80%</span>
+                </div>
+                <div class="left_4_1_box">
+                    <span><%=user.skills[3]%></span>
+                    <span>75%</span>
+                </div>
+                <div class="left_4_1_box">
+                    <span><%=user.skills[4]%></span>
+                    <span>85%</span>
+                </div>
+            </div>
+            <div class="marginer"></div>
+            <div class="left_5">
+                <strong>Extra Skills</strong>
+                <div class="icon">
+                    <img src="icon/Icons.png" width="15px" height="15px">
+                    <span><%=user.extra_skills[0]%></span>
+                    
+                </div>
+                <div class="icon">
+                    <img src="icon/Icons.png" width="15px" height="15px">
+                    <span><%=user.extra_skills[1]%></span>
+                    
+                </div>
+                <div class="icon">
+                    <img src="icon/Icons.png" width="15px" height="15px">
+                    <span><%=user.extra_skills[2]%></span>
+                    
+                </div>
+                <div class="icon">
+                    <img src="icon/Icons.png" width="15px" height="15px">
+                    <span><%=user.extra_skills[3]%></span>
+                    
+                </div>
+            
+            </div>
+            <div class="marginer"></div>
+            
+        </div>
+        <div class="midd_frame">
+            <div class="top_container">
+             <div class="header_container">
+              <span><%=user.work_place%> </span>
+              <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusamus fuga delectus temporibus error repellat cum eum sit commodi quas nostrum earum beatae modi omnis, atque sed tempora, dignissimos aliquid at.</p>
+              <button>Hire ME</button> 
+             </div>
+             <img src="images/Your Image 1.png">
+            </div>
+            <div class="bot_container">
+                <div class="bot_box_1">
+                    <strong>My services</strong>
+                </div>
+                <div class="bot_box_2">
+                    <span>Amet minim mollit non deserunt ullamco est sit 
+                        aliqua dolor do amet sint. Velit officia consequat 
+                        duis enim velit mollit. lorem ipsum</span>
+                </div>
+                <div class="bot_box_3">
+                   <div class="bot_box_3_1">
+                    <img src="images/Icons_coding.svg">
+                    <strong>Web Development</strong>
+                    <span>blog, e-commerce</span>
+                   </div>
+                   <div class="bot_box_3_2">
+                    <img src="images/Icons_illustration.svg">
+                    <strong>uI/uX design</strong>
+                    <span>Mobile app, website design</span>
+                   </div>
+                   <div class="bot_box_3_3">
+                    <img src="images/Icons_Microphone.svg">
+                    <strong>sound design</strong>
+                    <span>Voice Over, Beat Making</span>
+                   </div>
+                   <div class="bot_box_3_4">
+                    <img src="images/Icons_game-development.svg">
+                    <strong>game design</strong>
+                    <span>Character Design, Props & Objects</span>
+                   </div>
+                   <div class="bot_box_3_5">
+                    <img src="images/Icons_Photographer.svg">
+                    <strong>photography</strong>
+                    <span>portrait, product photography</span>
+                   </div>
+                   <div class="bot_box_3_6">
+                    <strong>Advertising</strong>
+                    <span>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vitae nulla diam in ac dictum a urna viverra morbi. </span>
+                    <a>ORDER NOW ></a>
+                   </div>
+                </div>
+            </div>
+        </div>
+        <div class="right_frame">
+            <div class="rf_top_box">
+                <div class="icon">
+                    <img src="icon/Vector.svg">
+                </div> 
+            </div>
+            <div class="rf_bot_box">
+                <div class="icon">
+                    <img src="icon/Home.svg">
+                </div> 
+                <div class="icon">
+                    <img src="icon/Service.svg">
+                </div> 
+                <div class="icon">
+                    <img src="icon/CV.svg">
+                </div> 
+                <div class="icon">
+                    <img src="icon/Portfolio.svg">
+                </div> 
+                <div class="icon">
+                    <img src="icon/Blog.svg">
+                </div> 
+                <div class="icon">
+                    <img src="icon/Contact.svg">
+                </div> 
+            </div>
+        </div>
+    </div>
+   </div> 
+</body>
+
+
+</html>

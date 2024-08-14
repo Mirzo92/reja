@@ -53,33 +53,5 @@ server.listen(PORT, function() {
 
 
 
-
-// const express = require('express');
-// const app = express();
-// const path = require('path');
-
-// // Middleware to parse incoming requests with JSON payloads
-// app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
-
-// // POST route to handle form submission
-// app.post("/create-item", (req, res) => {
-//     console.log(req.body);
-//     res.json({ test: "success" });
-// });
-
-// // GET route to render the "harid" page
-// app.get("/", (req, res) => {
-//     res.render("harid");
-// });
-
-// // Setting up the view engine (assuming you're using EJS)
-// app.set('view engine', 'ejs');
-// app.set('views', path.join(__dirname, 'views'));
-
-// // Start the server
-// const PORT = process.env.PORT || 3000;
-// app.listen(PORT, () => {
-//     console.log(`Server is running on port ${PORT}`);
-// });
-
+ 
+ 
