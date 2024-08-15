@@ -197,9 +197,36 @@ position: relative;
 width: 221px;
 height: 25px;
 display: flex;
-flex-direction: row;
+/* flex-direction: column; */
 justify-content: space-between;
-border-bottom: solid 4px #FFB400;
+
+}
+
+/* .main_frame .left_frame .left_3 .left_3_2_box .left_3_2_boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+.bar {
+    flex: 2;
+    background-color: #e0e0e0;
+    height: 4px;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-left: 10px;
+    position: relative;
+    margin-top: 12px;
+}
+
+.progress {
+    height: 100%;
+    background-color: orange;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    top: 0;
 }
 
 .main_frame .left_frame .left_3 .left_3_2_box span {
@@ -211,6 +238,7 @@ line-height: 24px;
 letter-spacing: 0%;
 text-align: left;
 text-transform: capitalize;
+margin-left: 10px;
 }
 
 
@@ -236,7 +264,7 @@ margin-top: 25px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    border-bottom: solid 4px #FFB400;
+   
 }
 
 .main_frame .left_frame .left_4 .left_4_1_box span {
@@ -248,6 +276,7 @@ margin-top: 25px;
     letter-spacing: 0%;
     text-align: left;
     text-transform: capitalize;
+    margin-left: 10px;
 }
 
 .main_frame .left_frame .left_5 {
@@ -289,12 +318,14 @@ text-transform: capitalize;
 position: relative;
 width: 100%;
 height: 454.33px;
+background-color: white;
 }
 
 .midd_frame .top_container .header_container {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-left: 20px;
    
 }
 
@@ -379,6 +410,10 @@ text-transform: capitalize;
     flex-wrap: wrap;
 }
 
+.midd_frame .bot_container .bot_box_2 {
+    text-align: center;
+}
+
 .midd_frame .bot_container .bot_box_3 {
     width: auto;
     height: 500px;
@@ -393,17 +428,24 @@ text-transform: capitalize;
 .midd_frame .bot_container .bot_box_3 .bot_box_3_1 {
     display: flex;
     position: relative;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     width: 310px;
 height: 225px;
 display: flex;
 flex-direction: column;
+background-color: white;
 }
 
 .midd_frame .bot_container .bot_box_3 img{
     position: relative;
+    display: flex;
     width: 68px;
     height: 68px;
 margin-bottom: 33px;
+text-align: center;
+justify-content: center;
 }
 
 .midd_frame .bot_container .bot_box_3 span {
@@ -419,47 +461,67 @@ text-transform: capitalize;
 
 .midd_frame .bot_container .bot_box_3 .bot_box_3_2 {
     display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     position: relative;
     width: 310px;
 height: 225px;
 display: flex;
 flex-direction: column;
+background-color: white;
 }
 
 .midd_frame .bot_container .bot_box_3 .bot_box_3_3 {
     display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     position: relative;
     width: 310px;
 height: 225px;
 display: flex;
 flex-direction: column;
+background-color: white;
 }
 
 .midd_frame .bot_container .bot_box_3 .bot_box_3_4 {
     display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     position: relative;
     width: 310px;
 height: 225px;
 display: flex;
 flex-direction: column;
+background-color: white;
 }
 
 .midd_frame .bot_container .bot_box_3 .bot_box_3_5 {
     display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     position: relative;
     width: 310px;
 height: 225px;
 display: flex;
 flex-direction: column;
+background-color: white;
 }
 
 .midd_frame .bot_container .bot_box_3 .bot_box_3_6 {
     display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
     position: relative;
     width: 310px;
 height: 225px;
 display: flex;
 flex-direction: column;
+background-color: white;
 }
 
 .midd_frame .bot_container .bot_box_3 .bot_box_3_6 a {
@@ -499,6 +561,8 @@ margin-top: 50px;
 }
 
 .main_frame .right_frame .rf_bot_box {
+    display: flex;
+    flex-direction: column;
     align-items: center;
 justify-content: space-between;
 margin-top: 50px;
