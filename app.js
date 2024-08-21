@@ -41,9 +41,15 @@ app.post("/create-item", (req, res) => {
     });
 });
 
-app.get("/author", (req, res) => {
-    res.render("author", {user: user});
-})
+app.post("/delete-item", (req, res) => {
+  const id = req.body.id;
+  console.log(id);
+  res.end("done");
+});
+
+// app.get("/author", (req, res) => {
+//     res.render("author", {user: user});
+// })
 
 app.get("/", function (req, res) {
     console.log("user entered /");

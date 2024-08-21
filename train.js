@@ -1,19 +1,42 @@
+//B TASK 
+
+function countDigits(str) {
+  let count = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (!isNaN(str[i])) {
+      count++;
+    }
+  }
+  return count;
+}
+
+console.log(countDigits("YSJGDK7HDSGD5SAVXADH4"));
+
+
+
+
+
+
+
+
+
+
 // A-TASK
 
-function atask(e, soz) {
-    let count = 0;
+// function atask(e, soz) {
+//     let count = 0;
   
-    for (let i = 0; i < soz.length; i++) {
-      if (soz[i] === e) {
-        console.log("before", count);
-        count++;
-      }
-    }
-    console.log("after", count);
-    return count;
-  }
+//     for (let i = 0; i < soz.length; i++) {
+//       if (soz[i] === e) {
+//         console.log("before", count);
+//         count++;
+//       }
+//     }
+//     console.log("after", count);
+//     return count;
+//   }
   
-  console.log(atask("e", "engineer"));
+//   console.log(atask("e", "engineer"));
 
 
 
