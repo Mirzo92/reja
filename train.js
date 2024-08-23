@@ -1,16 +1,96 @@
-//B TASK 
+//C-TASK
 
-function countDigits(str) {
-  let count = 0;
-  for (let i = 0; i < str.length; i++) {
-    if (!isNaN(str[i])) {
-      count++;
+const moment = require("moment");
+const time = moment().format("HH:mm");
+
+console.log("Bizda non, lagmon, cola bor");
+
+class Shop {
+  non;
+  cola;
+  lagmon;
+  constructor(non, lagmon, cola) {
+    this.non = non;
+    this.lagmon = lagmon;
+    this.cola = cola;
+  }
+
+  qoldiq() {
+    return Hozir ${time} da sizda ${this.non} ta non va ${this.lagmon} ta lagmon va ${this.cola} ta cola bor;
+  }
+
+  sotish(nomi, soni) {
+    if (nomi === "non") {
+      if (this.non === 0) {
+        return "Non qolmadi";
+      } else if (this.non >= soni) {
+        this.non -= soni;
+        return Hozir ${time} da  ${soni} non oldingiz!;
+      } else {
+        return "Bunday miqdorda non mavjud emas";
+      }
+    } else if (nomi === "lagmon") {
+      if (this.lagmon === 0) {
+        return "Lagmon qolmadi";
+      } else if (this.lagmon >= soni) {
+        this.lagmon -= soni;
+        return Hozir ${time} da  ${soni} lagmon oldingiz!;
+      } else {
+        return "Bunday miqdorda lagmon mavjud emas";
+      }
+    } else if (nomi === "cola") {
+      if (this.cola === 0) {
+        return "Cola qolmadi";
+      } else if (this.cola >= soni) {
+        this.cola -= soni;
+        return Hozir ${time} da  ${soni} cola oldingiz!;
+      } else {
+        return "Bunday miqdorda cola mavjud emas";
+      }
+    } else {
+      return "Mahsulot mavjud emas";
     }
   }
-  return count;
+
+  qabul(nomi, soni) {
+    if (nomi === "non") {
+      this.non += soni;
+      return Hozir ${time} da  ${soni} non qabul qildingiz!;
+    } else if (nomi === "lagmon") {
+      this.lagmon += soni;
+      return Hozir ${time} da  ${soni} lagmon qabul qildingiz!;
+    } else if (nomi === "cola") {
+      this.cola += soni;
+      return Hozir ${time} da  ${soni} cola qabul qildingiz!;
+    } else {
+      return "Mahsulot mavjud emas";
+    }
+  }
 }
 
-console.log(countDigits("YSJGDK7HDSGD5SAVXADH4"));
+const story = new Shop(23, 55, 7);
+console.log(story.qoldiq());
+console.log(story.qabul("lagmon", 10));
+console.log(story.qoldiq());
+
+
+
+
+
+
+// //B TASK 
+
+// function countDigits(str) {
+//   let count = 0;
+//   for (let i = 0; i < str.length; i++) {
+//     if (!isNaN(str[i])) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// console.log(countDigits("YSJGDK7HDSGD5SAVXADH4"));
 
 
 
