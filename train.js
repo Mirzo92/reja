@@ -16,7 +16,7 @@ class Shop {
   }
 
   qoldiq() {
-    return Hozir ${time} da sizda ${this.non} ta non va ${this.lagmon} ta lagmon va ${this.cola} ta cola bor;
+    return `Hozir ${time} da sizda ${this.non} ta non va ${this.lagmon} ta lagmon va ${this.cola} ta cola bor;`
   }
 
   sotish(nomi, soni) {
@@ -25,7 +25,7 @@ class Shop {
         return "Non qolmadi";
       } else if (this.non >= soni) {
         this.non -= soni;
-        return Hozir ${time} da  ${soni} non oldingiz!;
+        return `Hozir ${time} da  ${soni} non oldingiz!;`
       } else {
         return "Bunday miqdorda non mavjud emas";
       }
@@ -34,7 +34,7 @@ class Shop {
         return "Lagmon qolmadi";
       } else if (this.lagmon >= soni) {
         this.lagmon -= soni;
-        return Hozir ${time} da  ${soni} lagmon oldingiz!;
+        return `Hozir ${time} da  ${soni} lagmon oldingiz!;`
       } else {
         return "Bunday miqdorda lagmon mavjud emas";
       }
@@ -43,7 +43,7 @@ class Shop {
         return "Cola qolmadi";
       } else if (this.cola >= soni) {
         this.cola -= soni;
-        return Hozir ${time} da  ${soni} cola oldingiz!;
+        return `Hozir ${time} da  ${soni} cola oldingiz!;`
       } else {
         return "Bunday miqdorda cola mavjud emas";
       }
@@ -55,13 +55,13 @@ class Shop {
   qabul(nomi, soni) {
     if (nomi === "non") {
       this.non += soni;
-      return Hozir ${time} da  ${soni} non qabul qildingiz!;
+      return `Hozir ${time} da  ${soni} non qabul qildingiz!;`
     } else if (nomi === "lagmon") {
       this.lagmon += soni;
-      return Hozir ${time} da  ${soni} lagmon qabul qildingiz!;
+      return `Hozir ${time} da  ${soni} lagmon qabul qildingiz!;`
     } else if (nomi === "cola") {
       this.cola += soni;
-      return Hozir ${time} da  ${soni} cola qabul qildingiz!;
+      return `Hozir ${time} da  ${soni} cola qabul qildingiz!;`
     } else {
       return "Mahsulot mavjud emas";
     }

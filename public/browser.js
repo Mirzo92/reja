@@ -43,7 +43,7 @@ document.addEventListener("click", function (e) {
       axios
         .post("/delete-item", { id: e.target.getAttribute("data-id") })
         .then((response) => {
-          e.target.parentElement.parentElement.remove(); // Remove the item from the DOM
+          e.target.parentElement.parentElement.remove(); 
           console.log("Item deleted successfully");
         })
         .catch((err) => {
@@ -84,15 +84,4 @@ document.getElementById("clean-all").addEventListener("click", function() {
   });
 });
 
-// document.getElementById("clean-all").addEventListener("click", function() {
-//   axios.post("/delete-all", { delete_all: true })
-//     .then((response) => {
-//       alert(response.data.state);
-//       document.location.reload();  // Reload the page to update the UI
-//     })
-//     .catch((error) => {
-//       console.error("Error during deletion:", error);
-//       alert("An error occurred while trying to delete all items. Please try again.");
-//     });
-// });
 
