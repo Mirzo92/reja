@@ -1,6 +1,8 @@
 
-console.log("FrontEnd JS ishga tushdi");
+console.log("FrontEnd JS ishga tushdi"); 
 
+
+// functionni define qismi
 function itemTemplate(item) {
     return `<li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
             <span class="item-text">${item.reja}</span>
@@ -19,31 +21,32 @@ function itemTemplate(item) {
 
 let createField = document.getElementById("create-field");
 
-document.getElementById("create-form").addEventListener("submit", function (e) {
-    e.preventDefault();
 
-    axios
-    .post("/create-item", { reja: createField.value })
+// step A FRONT ENDGA KIRIB BACKENDGA MALUMOT YUBORISH
+document.getElementById("create-form").addEventListener("submit", function (e) {
+    e.preventDefault();  // tradional api ni toxtatdik
+    axios // front end bn backendi oldi berdisiga kerak
+    .post("/create-item", { reja: createField.value }) //methods, create item bu manzil
     .then((response) => {
-        document
-        .getElementById("item-list")
-        .insertAdjacentHTML("beforeend", itemTemplate(response.data));
-        createField.value = "";
+        document //object
+        .getElementById("item-list") 
+        .insertAdjacentHTML("beforeend", itemTemplate(response.data));//functionni call qismi
+        createField.value = ""; 
         createField.focus();
     })
     .catch((err) => {
         console.log("Iltimos, qaytadan harakat qilib koring.");
-    });
+    }); 
 });
 
 document.addEventListener("click", function (e) {
-  // Delete operation
+  // Delete operation     delete me degan classi bor tugma bosilsa
   if (e.target.classList.contains("delete-me")) {
     if (confirm("Aniq ochirmoqchimisiz?")) {
       axios
-        .post("/delete-item", { id: e.target.getAttribute("data-id") })
+        .post("/delete-item", { id: e.target.getAttribute("data-id") }) //front enddan beckendga ochirmoqchi bolgan elementimizni id sini yuboryapmiz
         .then((response) => {
-          e.target.parentElement.parentElement.remove(); 
+          e.target.parentElement.parentElement.remove(); // li ga ciqyapmiz va ochiryapmiz
           console.log("Item deleted successfully");
         })
         .catch((err) => {
@@ -53,6 +56,8 @@ document.addEventListener("click", function (e) {
   }
 
   // Edit operation (you can expand this as needed)
+
+//edit-me degan classga ega bolgan button bosilsa, pastdagi code lar ishga tushadi
   if (e.target.classList.contains("edit-me")) {
     let userInput = prompt("ozgartirish kiriting", 
       e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
@@ -60,14 +65,14 @@ document.addEventListener("click", function (e) {
     if (userInput) {
       axios
         .post("/edit-item", {
-          id: e.target.getAttribute("data-id"), 
-          new_input: userInput,
+          id: e.target.getAttribute("data-id"), //ozgartirmoqci bolgan elementimizni id sini yuboryapmiz
+          new_input: userInput, //yangi kiritilgan inputni yuboryapmiz
         })
-        .then((response) => {
+        .then((response) => { //response = res.json({state: "success"})
           console.log(response.data);
           e.target.parentElement.parentElement.querySelector(
             ".item-text"
-          ).innerHTML =userInput;
+          ).innerHTML = userInput; 
         })
         .catch((err) => {
           console.log("Iltimos, qaytadan harakat qilib ko'ring.");
@@ -76,11 +81,13 @@ document.addEventListener("click", function (e) {
     
   }
 });
-
+ 
+//clean-all degan id ga ega bolgan button bosilsa, function ishga tushadi
 document.getElementById("clean-all").addEventListener("click", function() {
-  axios.post("/delete-all", { delete_all: true }).then((response) => {
-    alert(response.data.state);
-    document.location.reload();
+  axios.post("/delete-all", { delete_all: true }) // front enddan backendga delete-all nomi bn true qiymatni yuboryapmiz
+  .then((response) => {
+    alert(response.data.state); // state: hamma rejalar ocirilidi
+    document.location.reload(); // reload qilarkan
   });
 });
 
