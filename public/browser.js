@@ -43,9 +43,11 @@ document.addEventListener("click", function (e) {
   // Delete operation     delete me degan classi bor tugma bosilsa
   if (e.target.classList.contains("delete-me")) {
     if (confirm("Aniq ochirmoqchimisiz?")) {
+      console.log("STEP-1")
       axios
         .post("/delete-item", { id: e.target.getAttribute("data-id") }) //front enddan beckendga ochirmoqchi bolgan elementimizni id sini yuboryapmiz
         .then((response) => {
+          console.log("STEP-4")
           e.target.parentElement.parentElement.remove(); // li ga ciqyapmiz va ochiryapmiz
           console.log("Item deleted successfully");
         })

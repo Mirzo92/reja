@@ -5,7 +5,7 @@ const app = express();
 const fs = require("fs");
 
 // MongoDB connect
-const db = require("./server").db();
+const db = require("./server").db(); //CRUD operationni ishlatishga yordam beradi
 const mongodb = require("mongodb");
 
 
@@ -19,7 +19,7 @@ fs.readFile("database/user.json", "utf8", (err, data) => {
 });
 
 //1 Kirish code
-app.use(express.static("public"));
+app.use(express.static("public")); //Reja ejs hamma malumotlarni static folderdan oladi
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -91,7 +91,7 @@ app.get("/", function (req, res) {
             console.log(err);
             res.end("something went wrong");
         } else {
-            res.render("reja", {items: data});
+            res.render("reja", {items: data}); // reja ejsga items nomi ostida data kiritdik
         }
     })
     
