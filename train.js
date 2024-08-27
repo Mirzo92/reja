@@ -1,19 +1,29 @@
+//E-TASK
 
 
+function checkContent(M) {
+  let gamer = M.split("").reverse().join("");
 
-
-// TASK D
-
-function checkContent(a, b) {
-  let array1 = a.split("").sort().join("");
-  let array2 = b.split("").sort().join("");
-  if (array1 === array2) {
-    return true;
-  }
-  return false;
+  return gamer;
 }
 
-console.log(checkContent("mitgroup", "mitgroup"));
+console.log(checkContent("corruption, pocket money"));
+
+
+
+
+// // TASK D
+
+// function checkContent(a, b) {
+//   let array1 = a.split("").sort().join("");
+//   let array2 = b.split("").sort().join("");
+//   if (array1 === array2) {
+//     return true;
+//   }
+//   return false;
+// }
+
+// console.log(checkContent("mitgroup", "mitgroup"));
 
 
 
