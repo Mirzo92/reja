@@ -1,13 +1,28 @@
-//E-TASK
+//F-task
 
-
-function checkContent(M) {
-  let gamer = M.split("").reverse().join("");
-
-  return gamer;
+function polar(olleh) {
+ const north = olleh.split("");
+ const south = north.some((magnus, index) => {
+  console.log(`${north.indexOf(magnus)} !== ${index}`);
+  return north.indexOf(magnus) !== index;
+ });
+ return south
 }
+console.log(polar("olleh"));
 
-console.log(checkContent("corruption, pocket money"));
+
+
+
+// //E-TASK
+
+
+// function checkContent(M) {
+//   let gamer = M.split("").reverse().join("");
+
+//   return gamer;
+// }
+
+// console.log(checkContent("corruption, pocket money"));
 
 
 
